@@ -7,9 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Principale {
-    public static final String CHEMIN_FIC_INPUT = "fichierInput.txt";
-    public static final String CHEMIN_FIC_OUTPUT = "fichierOutput.html";
-    public static final String DEBUT_HTML =
+    private static final String CHEMIN_FIC_INPUT = "fichierInput.txt";
+    private static final String CHEMIN_FIC_OUTPUT = "fichierOutput.html";
+    private static final String DEBUT_HTML =
               "<!DOCTYPE html>\n"
             + "<html>\n"
             + "    <head>\n"
@@ -18,7 +18,7 @@ public class Principale {
             + "    <body>\n"
             + "        <hr>\n"
             + "        <table>\n";
-    public static final String FIN_HTML =
+    private static final String FIN_HTML =
               "        </table>\n"
             + "        <hr>\n"
             + "    </body>\n"
@@ -27,12 +27,16 @@ public class Principale {
     /**Prend le fichier a l'endroit indiquer en parametre et ajoute chacune de ses lignes a l'ArrayList indique en
      * parametre.
      *
+     * Ouvre et lit le fichier a l'adresse indiquee, mets chaque ligne (indentifiee par la presence d'un '\n', d'un
+     * '\r' ou d'en '\r\n', ou en atteignant la fin du fichier. Chaque ligne est convertie en String et ajoutee a
+     * l'ArrayList
+     *
      * @param fichier           Un ArrayList dans lequel on veut entrer le contenu d'un fichier, une ligne par element
      *                          dans l'ArrayList
      * @param cheminFichier     chemin relatif ou absolu, sous forme de String, pointant vers le fichier que l'on veut
      *                          lire
      */
-    protected static void lireFichier(ArrayList<String> fichier, String cheminFichier){
+    private static void lireFichier(ArrayList<String> fichier, String cheminFichier){
         BufferedReader fic = null;
         try{
             fic = new BufferedReader(new FileReader(cheminFichier));
@@ -56,10 +60,11 @@ public class Principale {
 
     /** Cree le fichier html compose de la String passee en parametre a l'endroit passe en parametre.
      *
-     * @param contenu
-     * @param cheminFichier
+     * Ecrase ou creer un fichier html du nom specifie ayant le contenu envoye en parametre.
+     * @param contenu   String composant l'entierete du contenu du fichier html
+     * @param cheminFichier     addresse de l'emplacement ou le fichier sera creer/remplacer
      */
-    protected static void ecrireFichier(String contenu, String cheminFichier){
+    private static void ecrireFichier(String contenu, String cheminFichier){
         BufferedWriter fic = null;
 
         try{

@@ -5,11 +5,16 @@ public class Roomaji2html {
 
     /** Converti un ArrayList de String en un String composant un tableau html des roomaji qui le composait en kana
      *
-     * @param listeLigneRoomaji
-     * @return
+     * Prend en parametre un String; si le String est composee uniquement de Roomaji valide et de '.' et ' ', orientee
+     * droite a gauche et de haut en bas, retourne un String representant un tableau html des Kana equivalent, oriente
+     * de haut en bas et de droite a gauche.
+     * Retourne le texte de l'erreur dans tous les autres cas.
+     *
+     * @param listeLigneRoomaji Un ArrayList de String contenant exclusivement des Roomaji, des '.' et des ' '.
+     * @return    Un String de ces Roomaji converti en leur Kana equivalent, pret a l'affichage html.
      */
     public static String convertir(ArrayList<String> listeLigneRoomaji){
-        String resultat = "";
+        StringBuilder resultat = new StringBuilder();
         Kana kana = new Kana();
         ArrayList<ArrayList<String>> tableau = new ArrayList<>();
         try{
@@ -17,32 +22,33 @@ public class Roomaji2html {
                 tableau.add(trouverSyllabes(ligne));
             }
         }catch(SyllabeImpossible e){
-            resultat = e.getMessage();
+            resultat.append(e.getMessage());
         }
         tableau = ManipuleArrayList.inverseLigne(tableau);
         tableau = ManipuleArrayList.transpose(tableau);
         try{
             for(ArrayList<String> arr : tableau){
-                resultat = resultat + "        <tr>";
+                resultat.append("        <tr>");
                 for(String str : arr){
-                    resultat = resultat + "<td>" + kana.getKana(str) + "</td>";
+                    resultat.append("<td>").append(kana.getKana(str)).append("</td>");
                 }
-                resultat = resultat + "</tr>\n";
+                resultat = resultat.append("</tr>\n");
             }
         }catch(SyllabeImpossible e){
-            resultat = e.getMessage();
+            resultat.append(e.getMessage());
         }
-        return resultat;
+        return resultat.toString();
     }
 
 
     /**Recoit un String contenant une ligne en Roomaji, et retourne un ArrayList de chacune des syllabes.
      *
      * Parcour un String, et la decoupe en morceau du premier charactere [A-Z] jusqu'a la premiere voyelle [A-E-I-O-U]
-     * ou la premiere apostrophe.
+     * ou la premiere apostrophe, conservant les '.' avec la syllabes qu'ils accompagnaient et retirant les ' '.
      *
-     * @param ligne
-     * @return
+     * @param ligne Un String representant une ligne de texte Roomaji, avec ' ' et '.'
+     * @return  un ArrayList de String contenant, en ordre, chaque syllabes qui composaient la String (les '.' etant
+     *          dans le meme element que la syllabe le precedent).
      * @throws  SyllabeImpossible   Lorsqu'une syllabe serait plus grande que 3 characteres
      */
     private static ArrayList<String> trouverSyllabes(String ligne) throws SyllabeImpossible{

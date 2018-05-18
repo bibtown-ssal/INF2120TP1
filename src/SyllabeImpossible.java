@@ -1,4 +1,5 @@
 public class SyllabeImpossible extends Exception {
+
     public SyllabeImpossible(){
         super();
     }
