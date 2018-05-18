@@ -45,7 +45,8 @@ public class Roomaji2html {
      * @param ligne Un String representant une ligne de texte Roomaji, avec ' ' et '.'
      * @return  un ArrayList de String contenant, en ordre, chaque syllabes qui composaient la String (les '.' etant
      *          dans le meme element que la syllabe le precedent).
-     * @throws  SyllabeImpossible   Lorsqu'une syllabe serait plus grande que 3 characteres
+     * @throws  SyllabeImpossible   Lorsqu'une syllabe serait plus grande que 3 characteres ou que la ligne ne se
+     *                              pas par une syllabe valide (avec ou sans '.' ou ' ' a la fin)
      */
     private static ArrayList<String> trouverSyllabes(String ligne) throws SyllabeImpossible{
         ArrayList<String> listeSyllabes = new ArrayList<>();
