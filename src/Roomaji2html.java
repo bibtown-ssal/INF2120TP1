@@ -21,12 +21,8 @@ public class Roomaji2html {
             for(String ligne : listeLigneRoomaji){
                 tableau.add(trouverSyllabes(ligne));
             }
-        }catch(SyllabeImpossible e){
-            resultat.append(e.getMessage());
-        }
-        tableau = ManipuleArrayList.inverseLigne(tableau);
-        tableau = ManipuleArrayList.transpose(tableau);
-        try{
+            tableau = ManipuleArrayList.inverseLigne(tableau);
+            tableau = ManipuleArrayList.transpose(tableau);
             for(ArrayList<String> arr : tableau){
                 resultat.append("        <tr>");
                 for(String str : arr){
@@ -62,11 +58,13 @@ public class Roomaji2html {
             }else if(ligne.charAt(debut) == ' '){
                 debut++;
             }else if(i-debut > 2){
-                throw new SyllabeImpossible("Il semble y avoir une syllabe de plus de 3 characteres..." + ligne + debut + i);
+                throw new SyllabeImpossible("Il semble y avoir une syllabe de plus de 3 characteres...");
             }else if(ligne.charAt(i) == 'A' || ligne.charAt(i) == 'E' || ligne.charAt(i) == 'I'
                     || ligne.charAt(i) == 'O' || ligne.charAt(i) == 'U'|| ligne.charAt(i) == '\''){
                 listeSyllabes.add(ligne.substring(debut,i+1));
                 debut = i+1;
+            }else if(i == ligne.length()-1){
+                throw new SyllabeImpossible("La ligne ne termine pas par une syllabe valide...");
             }
         }
         return listeSyllabes;

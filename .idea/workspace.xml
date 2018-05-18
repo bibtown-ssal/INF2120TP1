@@ -4,10 +4,7 @@
     <list default="true" id="36ddf1b1-d3ad-40d3-b670-6b4f99b623f7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/fichierInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fichierInput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fichierOutput.html" beforeDir="false" afterPath="$PROJECT_DIR$/fichierOutput.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManipuleArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManipuleArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Principale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Principale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roomaji2html.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roomaji2html.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SyllabeImpossible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SyllabeImpossible.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Principale.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Principale.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Principale.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1530">
@@ -31,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Roomaji2html.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Roomaji2html.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Roomaji2html.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="172">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -43,7 +40,7 @@
       <file leaf-file-name="Kana.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Kana.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-1664">
               <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
@@ -65,7 +62,7 @@
       <file leaf-file-name="ManipuleArrayList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ManipuleArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-321">
+            <state relative-caret-position="306">
               <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
             </state>
           </provider>
@@ -98,10 +95,10 @@
         <option value="$PROJECT_DIR$/src/Principal.java" />
         <option value="$PROJECT_DIR$/src/plan.txt" />
         <option value="$PROJECT_DIR$/src/Kana.java" />
-        <option value="$PROJECT_DIR$/src/Roomaji2html.java" />
         <option value="$PROJECT_DIR$/src/SyllabeImpossible.java" />
         <option value="$PROJECT_DIR$/src/ManipuleArrayList.java" />
         <option value="$PROJECT_DIR$/src/Principale.java" />
+        <option value="$PROJECT_DIR$/src/Roomaji2html.java" />
       </list>
     </option>
   </component>
@@ -213,12 +210,12 @@
       <updated>1526405161972</updated>
       <workItem from="1526405169424" duration="2683000" />
       <workItem from="1526605043423" duration="13676000" />
-      <workItem from="1526657005584" duration="5582000" />
+      <workItem from="1526657005584" duration="6172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21941000" />
+    <option name="totallyTimeSpent" value="22531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="284" y="159" width="1453" height="921" extended-state="0" />
@@ -327,17 +324,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Roomaji2html.java">
+    <entry file="file://$PROJECT_DIR$/src/ManipuleArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kana.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="306">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -352,10 +342,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManipuleArrayList.java">
+    <entry file="file://$PROJECT_DIR$/src/Kana.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        <state relative-caret-position="-1664">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -366,6 +356,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Roomaji2html.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
     </entry>
