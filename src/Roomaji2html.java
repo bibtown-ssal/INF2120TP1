@@ -10,6 +10,7 @@ public class Roomaji2html {
      */
     public static String convertir(ArrayList<String> listeLigneRoomaji){
         String resultat = "";
+        Kana kana = new Kana();
         ArrayList<ArrayList<String>> tableau = new ArrayList<>();
         try{
             for(String ligne : listeLigneRoomaji){
@@ -20,15 +21,17 @@ public class Roomaji2html {
         }
         tableau = ManipuleArrayList.inverseLigne(tableau);
         tableau = ManipuleArrayList.transpose(tableau);
-
-        for(ArrayList<String> arr : tableau){
-            resultat = resultat + "<tr>";
-            for(String str : arr){
-                resultat = resultat + "<td>" + str + "</td>";
+        try{
+            for(ArrayList<String> arr : tableau){
+                resultat = resultat + "        <tr>";
+                for(String str : arr){
+                    resultat = resultat + "<td>" + kana.getKana(str) + "</td>";
+                }
+                resultat = resultat + "</tr>\n";
             }
-            resultat = resultat + "</tr>";
+        }catch(SyllabeImpossible e){
+            resultat = e.getMessage();
         }
-
         return resultat;
     }
 
@@ -62,8 +65,4 @@ public class Roomaji2html {
         }
         return listeSyllabes;
     }
-
-
-
-
 }
