@@ -4,7 +4,6 @@
     <list default="true" id="36ddf1b1-d3ad-40d3-b670-6b4f99b623f7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/fichierInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fichierInput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fichierOutput.html" beforeDir="false" afterPath="$PROJECT_DIR$/fichierOutput.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Roomaji2html.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roomaji2html.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +30,7 @@
       <file leaf-file-name="Roomaji2html.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Roomaji2html.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="221">
               <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
             </state>
           </provider>
@@ -210,12 +209,12 @@
       <updated>1526405161972</updated>
       <workItem from="1526405169424" duration="2683000" />
       <workItem from="1526605043423" duration="13676000" />
-      <workItem from="1526657005584" duration="6172000" />
+      <workItem from="1526657005584" duration="6425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22531000" />
+    <option name="totallyTimeSpent" value="22784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="284" y="159" width="1453" height="921" extended-state="0" />
@@ -361,7 +360,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Roomaji2html.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="221">
           <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
