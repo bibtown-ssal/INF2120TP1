@@ -1,8 +1,7 @@
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.HashMap;
 
 public class Kana{
-    public Map <String, String> kana = new TreeMap<>();
+    public HashMap <String, String> kana = new HashMap<>();
 
     public Kana() {
         kana.put("A", "&#12354;");
