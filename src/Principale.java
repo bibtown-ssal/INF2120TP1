@@ -5,10 +5,18 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Principale {
-    private static final String CHEMIN_FIC_INPUT = "fichierInput.txt";
     private static final String CHEMIN_FIC_OUTPUT = "fichierOutput.html";
+
+    private static final String MSG_PRES = "Bonjour!\nCe programme tranforme un .txt de Roomaji en .html affichant les"
+            + " Kanas appropries.";
+    private static final String MSG_SOL_INPUT = "Veuillez entrer le nom du fichier txt contenant le texte en Roomaji: ";
+    private static final String MSG_SOL_OUTPUT =
+            "Veuillez entrer le nom desire pour le fichier html contenant les kanas: ";
+    private static final String MSG_ERR_FIC_INTROUVABLE = "Le fichier que vous avez demande est introuvable.";
+
     private static final String DEBUT_HTML =
               "<!DOCTYPE html>\n"
             + "<html>\n"
@@ -39,12 +47,15 @@ public class Principale {
     private static void lireFichier(ArrayList<String> fichier, String cheminFichier){
         BufferedReader fic = null;
         try{
+            if(!cheminFichier.endsWith(".txt")){
+                cheminFichier += ".txt";
+            }
             fic = new BufferedReader(new FileReader(cheminFichier));
             while(fic.ready()){
                 fichier.add(fic.readLine());
             }
         }catch(FileNotFoundException e) {
-            System.out.println("Fichier non trouve");
+            System.out.println(MSG_ERR_FIC_INTROUVABLE);
         }catch(IOException e){
             System.out.println("Erreur dans la lecture du fichier");
         }finally {
@@ -68,6 +79,9 @@ public class Principale {
         BufferedWriter fic = null;
 
         try{
+            if(!cheminFichier.endsWith(".html")){
+                cheminFichier += ".html";
+            }
             fic = new BufferedWriter(new FileWriter(cheminFichier));
             fic.write(contenu);
         }catch(IOException e){
@@ -83,8 +97,17 @@ public class Principale {
 
 
     public static void main(String [] Args){
+        Scanner sc;
+        String nomFichier;
+        System.out.println(MSG_PRES);
+        System.out.println(MSG_SOL_INPUT);
+        sc = new Scanner(System.in);
+        nomFichier = sc.next();
         ArrayList<String> fichier = new ArrayList<>();
-        lireFichier(fichier,CHEMIN_FIC_INPUT);
-        ecrireFichier(DEBUT_HTML + Roomaji2html.convertir(fichier) + FIN_HTML,CHEMIN_FIC_OUTPUT);
+        lireFichier(fichier,nomFichier);
+        System.out.println(MSG_SOL_OUTPUT);
+        sc = new Scanner(System.in);
+        nomFichier = sc.next();
+        ecrireFichier(DEBUT_HTML + Roomaji2html.convertir(fichier) + FIN_HTML,nomFichier);
     }
 }
