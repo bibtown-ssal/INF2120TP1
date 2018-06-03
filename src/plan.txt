@@ -1,0 +1,4 @@
+lecture fichier
+    -> mise de chaque ligne en ArrayList
+    -> isolation de chaque syllabe de chaque ligne (mise de chaque syllabe dans un ArrayList
+    -> transformer ces syllabes en code html
