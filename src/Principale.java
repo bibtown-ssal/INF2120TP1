@@ -36,7 +36,7 @@ public class Principale {
      * parametre.
      *
      * Ouvre et lit le fichier a l'adresse indiquee, mets chaque ligne (indentifiee par la presence d'un '\n', d'un
-     * '\r' ou d'en '\r\n', ou en atteignant la fin du fichier. Chaque ligne est convertie en String et ajoutee a
+     * '\r' ou d'en '\r\n', ou en atteignant la fin du fichietesr. Chaque ligne est convertie en String et ajoutee a
      * l'ArrayList
      *
      * @param fichier           Un ArrayList dans lequel on veut entrer le contenu d'un fichier, une ligne par element
@@ -55,15 +55,15 @@ public class Principale {
                 fichier.add(fic.readLine());
             }
         }catch(FileNotFoundException e) {
-            System.out.println(MSG_ERR_FIC_INTROUVABLE);
+            System.err.println(MSG_ERR_FIC_INTROUVABLE);
         }catch(IOException e){
-            System.out.println("Erreur dans la lecture du fichier");
+            System.err.println("Erreur dans la lecture du fichier");
         }finally {
             if (fic != null) {
                 try {
                     fic.close();
                 } catch (IOException e) {
-                    System.out.println("Erreur dans la liberation du fichier");
+                    System.err.println("Erreur dans la liberation du fichier");
                 }
             }
         }
@@ -85,12 +85,12 @@ public class Principale {
             fic = new BufferedWriter(new FileWriter(cheminFichier));
             fic.write(contenu);
         }catch(IOException e){
-            System.out.println("Erreur dans la creation du FileWriter");
+            System.err.println("Erreur dans la creation du FileWriter");
         }finally{
             try{
                 fic.close();
             }catch(IOException e){
-                System.out.println("Erreur dans la creation/liberation du fichier");
+                System.err.println("Erreur dans la creation/liberation du fichier");
             }
         }
     }

@@ -1,6 +1,10 @@
 import java.util.HashMap;
 
+/**Classe qui permet de faire la traduction entre une syllabe Roomaji et un Kana (code HTML)
+ *
+ */
 public class Kana{
+
     public HashMap <String, String> kana = new HashMap<>();
 
     public Kana() {
@@ -116,6 +120,12 @@ public class Kana{
         kana.put("", "");
     }
 
+    /**Cette methode prend une syllabe Roomaji et retourne le code HTML de son kana
+     *
+     * @param key   String contenant une syllabe Roomaji (avec ou sans un .) et rien d'autre
+     * @return      String contenant le code HTML pour faire afficher le kana correspondant
+     * @throws SyllabeImpossible    Si la syllabe fournie en argument n'a pas de kana correspondant
+     */
     public String getKana(String key) throws SyllabeImpossible{
         String result = kana.get(key);
         if(result == null){

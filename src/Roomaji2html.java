@@ -31,7 +31,8 @@ public class Roomaji2html {
                 resultat = resultat.append("</tr>\n");
             }
         }catch(SyllabeImpossible e){
-            resultat.append(e.getMessage());
+            System.err.println(e);
+            System.exit(-1);
         }
         return resultat.toString();
     }
