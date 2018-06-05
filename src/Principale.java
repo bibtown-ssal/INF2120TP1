@@ -52,7 +52,7 @@ public class Principale {
             }
             fic = new BufferedReader(new FileReader(cheminFichier));
             while(fic.ready()){
-                fichier.add(fic.readLine());
+                fichier.add(fic.readLine().trim());
             }
         }catch(FileNotFoundException e) {
             System.err.println(MSG_ERR_FIC_INTROUVABLE);

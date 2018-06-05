@@ -38,7 +38,7 @@ public class Roomaji2html {
     }
 
 
-    /**Recoit un String contenant une ligne en Roomaji, et retourne un ArrayList de chacune des syllabes.
+    /**Recoit un String contenant une ligne en Roomaji, et retourne un ArrayList de chacune des syllabes en majuscule.
      *
      * Parcour un String, et la decoupe en morceau du premier charactere [A-Z] jusqu'a la premiere voyelle [A-E-I-O-U]
      * ou la premiere apostrophe, conservant les '.' avec la syllabes qu'ils accompagnaient et retirant les ' '.
